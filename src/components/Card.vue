@@ -1,5 +1,7 @@
 <script setup lang="ts">
-  defineProps({
+
+defineProps({
+    id: Number,
     title: String,
     imgUrl: String,
     price: Number,
@@ -8,6 +10,8 @@
     onClickAdd: Function,
     onClickFavorite: Function,
   })
+
+
 </script>
 
 <template>
@@ -29,7 +33,7 @@
       <img
           :src="!isAdded ? '/plus.svg' : '/checked.svg'"
           @click="onClickAdd"
-          alt="plus"
+          alt="add"
       />
     </div>
   </div>
